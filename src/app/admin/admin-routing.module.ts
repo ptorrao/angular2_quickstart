@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { AdminComponent } from './admin.component';
-// import { AdminDashboardComponent } from './admin-dashboard.component';
+import { AdminDashboardComponent } from './admin-dashboard.component';
 import { AdminFeature1Component } from './admin-feature1.component';
 import { AdminFeature2Component } from './admin-feature2.component';
 
@@ -32,8 +32,7 @@ const childRoutes = [
                     },
                     {
                         path: '',
-                        component: AdminComponent
-                        // component: AdminDashboardComponent
+                        component: AdminDashboardComponent
                     }
                 ]
             }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { Router, NavigationExtras } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 
 import { AuthService } from './auth.service';
 
@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
     constructor(
         public authService: AuthService,
-        // public router: Router
+        public router: Router
     ) { 
         this.setMessage();
     }
@@ -28,7 +28,9 @@ export class LoginComponent implements OnInit {
             this.setMessage();
 
             if (this.authService.isLoggedIn) {
+                console.log('Redirecting to ' + this.authService.redirectURL);        
                 // Redirect to target page
+                this.router.navigate([this.authService.redirectURL]);
             } else {
                 // Show error message
                 this.message = 'Authentication failed!';

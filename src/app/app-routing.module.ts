@@ -23,14 +23,14 @@ const appRoutes = [
         component: HomeComponent
     },
     {
-        path: 'feature1',
+        path: 'features1',
         loadChildren: 'app/feature1/feature1.module#Feature1Module',
         // data: {
         //     preload: true
         // }
     },
     {
-        path: 'feature2',
+        path: 'features2',
         loadChildren: 'app/feature2/feature2.module#Feature2Module',
         // data: {
         //     preload: true

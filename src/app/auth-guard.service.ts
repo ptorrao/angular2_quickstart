@@ -52,6 +52,7 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
         }
 
         this.authService.redirectURL = url;
+        console.log('Saving redirect as ' + url);
 
         let sessionId = 123456789;
 
@@ -59,7 +60,7 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
             queryParams: {
                 'session_id': sessionId
             },
-            fragment: 'anchor'
+            // fragment: 'anchor'
         };
 
         this.router.navigate(['/login'], navigationExtras);

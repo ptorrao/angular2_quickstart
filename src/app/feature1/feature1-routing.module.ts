@@ -6,7 +6,7 @@ import { Feature1ListComponent } from './feature1-list.component';
 
 const childRoutes = [
     {
-        path: 'feature1',
+        path: 'features1',
         component: Feature1ListComponent
     },
     // {
